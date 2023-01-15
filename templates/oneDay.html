@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='data.css')}} ")>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        
+        <table>
+            <tr>
+                <td>{{machineName}}</td>
+            </tr>
+            <tr>
+                <td>{{columName[0]}}</td> <td>{{columName[1]}}</td> <td>{{columName[2]}}</td> <td>{{columName[3]}}</td> <td>{{columName[4]}}</td>
+            </tr>
+
+            <tr>
+                <td>{{data[0]}}</td> <td>{{data[1]}}</td> <td>{{data[2]}}</td> <td>{{machineStoppage}}</td> <td>{{data[4]}}</td>
+            </tr>
+
+            
+        </table>
+        <div class="buttons">
+        <form action="http://localhost:5000/oneDay/181" method="POST"><input type="submit" value="Maszyna 181"></form>
+        <form action="http://localhost:5000/oneDay/230" method="POST"><input type="submit" value="Maszyna 230"></form>
+        <form action="http://localhost:5000/oneDay/254" method="POST"><input type="submit" value="Maszyna 254"></form>
+        <form action="http://localhost:5000/oneDay/268" method="POST"><input type="submit" value="Maszyna 268"></form>
+        <form action="http://localhost:5000/oneDay/273" method="POST"><input type="submit" value="Maszyna 273"></form>
+        <form action="http://localhost:5000/oneDay/269" method="POST"><input type="submit" value="Maszyna 269"></form>
+        <button id="backButton" onclick="backToMainPage()">Powrót</button>
+        </div>
+
+        
+
+
+    </div>
+    <script src="{{ url_for('static', filename='script.js')}}"></script>
+</body>
+</html>

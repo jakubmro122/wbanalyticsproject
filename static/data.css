@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    min-height: 500px;
+    justify-content: center;
+}
+
+table, td, tr{
+    border:solid 1px black;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+#backButton{
+    width: 60px;
+    
+}
+
