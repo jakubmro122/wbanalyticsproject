@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='data.css')}} ")>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        
+        <table>
+            <tr>
+                <td class="columnName">{{machineName}}</td>
+            </tr>
+            <tr>
+                <td class="columnName">{{columName[0]}}</td> <td class="columnName">{{columName[1]}}</td> <td class="columnName">{{columName[2]}}</td> <td class="columnName">{{columName[3]}}</td> <td class="columnName">{{columName[4]}}</td>
+            </tr>
+
+            {% for i in range(0, 57) %}
+                <tr>
+                    <td>{{fullData[i][0]}}</td> <td>{{fullData[i][1]}}</td> <td>{{fullData[i][2]}}</td> <td>{{fullMachineStoppage[i]}}</td> <td>{{fullData[i][4]}}</td>
+                </tr>
+            {% endfor %}
+
+            
+            
+        </table>
+        <div class="buttons">
+            <button onclick="full181()">Maszyna 181</button>
+            <button onclick="full230()">Maszyna 230</button>
+            <button onclick="full254()">Maszyna 254</button>
+            <button onclick="full268()">Maszyna 268</button>
+            <button onclick="full273()">Maszyna 273</button>
+            <button onclick="full269()">Maszyna 269</button>
+            <button id="backButton" onclick="backToMainPage()">Powrót</button>
+        </div>
+
+        
+
+
+    </div>
+    <script src="{{ url_for('static', filename='script.js')}}"></script>
+</body>
+</html>

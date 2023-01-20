@@ -4,12 +4,19 @@
     box-sizing: border-box;
 }
 
+html,body{
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
 body{
     width: 100vw;
     min-height: 100vh;
     display:flex;
     justify-content: center;
     align-items: center;
+
+    background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
 }
 
 .container{
@@ -21,8 +28,31 @@ body{
 }
 
 table, td, tr{
-    border:solid 1px black;
+    background-color: white;
+    text-align: center;
 }
+
+td{
+    border-radius: 3px;
+    font-size: 1.2rem;
+    filter: drop-shadow(0 0 3px black);
+}
+
+table{
+    background-image: linear-gradient( 76.3deg,  rgba(44,62,78,1) 12.6%, rgba(69,103,131,1) 82.8% );
+    
+    
+}
+
+.columnName{
+    background-color:  green;
+    color: white;
+}
+
+button{
+    filter: drop-shadow(0 0 2px black);
+}
+
 
 .buttons{
     display: flex;
@@ -34,3 +64,27 @@ table, td, tr{
     
 }
 
+input, button{
+    width: 100px;
+    height: 30px;
+    border-radius:15px;
+    border:solid 1px transparent;
+    background-color: green;
+    color:white;
+}
+
+button:hover, input:hover{
+    transform: translateY(-5px);
+    filter:drop-shadow(0 1px 4px black);
+
+}
+button:active{
+    background-color: white;
+    color:green;
+    transition-duration: 0.3s;
+}
+
+img{
+    filter: drop-shadow(0 0 5px black);
+    margin: auto;
+}

@@ -12,10 +12,10 @@
         
         <table>
             <tr>
-                <td>{{machineName}}</td>
+                <td class="columnName">{{machineName}}</td>
             </tr>
             <tr>
-                <td>{{columName[0]}}</td> <td>{{columName[1]}}</td> <td>{{columName[2]}}</td> <td>{{columName[3]}}</td> <td>{{columName[4]}}</td>
+                <td class="columnName">{{columName[0]}}</td> <td class="columnName">{{columName[1]}}</td> <td class="columnName">{{columName[2]}}</td> <td class="columnName">{{columName[3]}}</td> <td class="columnName">{{columName[4]}}</td>
             </tr>
 
             <tr>
@@ -46,24 +46,28 @@
                 <td>{{sevenDaysData[6][0]}}</td> <td>{{sevenDaysData[6][1]}}</td> <td>{{sevenDaysData[6][2]}}</td> <td>{{sevenDaysMachineStoppage[6]}}</td> <td>{{sevenDaysData[6][4]}}</td>
             </tr>
             
-            <tr>
-                <td>Łącznie</td> 
-            </tr>
+        
 
         </table>
         <div class="buttons">
-        <form action="http://localhost:5000/sevenDays/181" method="POST"><input type="submit" value="Maszyna 181"></form>
-        <form action="http://localhost:5000/sevenDays/230" method="POST"><input type="submit" value="Maszyna 230"></form>
-        <form action="http://localhost:5000/sevenDays/254" method="POST"><input type="submit" value="Maszyna 254"></form>
-        <form action="http://localhost:5000/sevenDays/268" method="POST"><input type="submit" value="Maszyna 268"></form>
-        <form action="http://localhost:5000/sevenDays/273" method="POST"><input type="submit" value="Maszyna 273"></form>
-        <form action="http://localhost:5000/sevenDays/269" method="POST"><input type="submit" value="Maszyna 269"></form>
-        <button id="backButton" onclick="backToMainPage()">Powrót</button>
+            <button onclick="seven181()">Maszyna 181</button>
+            <button onclick="seven230()">Maszyna 230</button>
+            <button onclick="seven254()">Maszyna 254</button>
+            <button onclick="seven268()">Maszyna 268</button>
+            <button onclick="seven273()">Maszyna 273</button>
+            <button onclick="seven269()">Maszyna 269</button>
+
+            <button id="backButton" onclick="backToMainPage()">Powrót</button>
         </div>
 
-        
-    </div>
+       
+        <img src="data:image/png;base64,{{ chart1 }}" width="800px">
+        <img src="data:image/png;base64,{{ chart2 }}" width="800px">
+        <img src="data:image/png;base64,{{ chart3 }}" width="800px">
+        <img src="data:image/png;base64,{{ chart4 }}" width="800px">
+        <img src="data:image/png;base64,{{ chart5 }}" width="800px">
 
+        
     <script src="{{ url_for('static', filename='script.js')}}"></script>
 </body>
 </html>
