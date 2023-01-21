@@ -990,6 +990,6 @@ def getFullData269():
   return render_template('fullData.html', columName = columName, data=data, machineName = machineName, machineStoppage=machineStoppage, fullData = fullData, fullMachineStoppage = fullMachineStoppage)
 
 if __name__ =='__main__':
-    myapp.run()
+    app.run()
 
 
